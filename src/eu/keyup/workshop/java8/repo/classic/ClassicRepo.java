@@ -1,10 +1,12 @@
 package eu.keyup.workshop.java8.repo.classic;
 
+import eu.keyup.workshop.java8.repo.Repo;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class ClassicRepo<ID, T> {
+public abstract class ClassicRepo<ID, T> implements Repo<T> {
 
     private final Map<ID, T> map = new HashMap<>();
 
