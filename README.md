@@ -3,9 +3,9 @@ Useful links, small snippets, notes etc. should be gathered in this file.
 
 ## Functional Programming (Generic)
 * immutability
+* final arguments
 * no side effects
 * SRP
-* final arguments
 * function reference (functional interfaces - consumer, ...)
 
 ## Java 8 general
@@ -25,8 +25,6 @@ Useful links, small snippets, notes etc. should be gathered in this file.
 ## Stream API
 * maximum example
 
-## Spliterator?
-
 ## Intelligent Repository 
 2 examples of map-based repositories:
 
@@ -36,3 +34,4 @@ Useful links, small snippets, notes etc. should be gathered in this file.
     * get returning optional
     * lambda filters
   
+## Spliterator?
