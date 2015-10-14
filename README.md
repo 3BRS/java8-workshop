@@ -1,14 +1,14 @@
 # Java 8 workshop
 Useful links, small snippets, notes etc. should be gathered in this file.
 
-## Functional Programming (Generic)
+## Functional Programming (General) (Ondra)
 * immutability
 * final arguments
 * no side effects
 * SRP
 * function reference (functional interfaces - consumer, ...)
 
-## Java 8 general
+## Java 8 general (Ondra)
 * java.util.DateTime
 * default methods (traits)
 * forEach side effects
@@ -16,16 +16,16 @@ Useful links, small snippets, notes etc. should be gathered in this file.
 * broken JavaDoc because of "improvements"
 * paths to files ('/' at the beginning of path)
 
-## Functional Interface
+## Functional Interface (Ondra)
 
-## Lambda Expression
+## Lambda Expression (Ondra)
 
-## Optional
+## Optional (Ondra)
 
-## Stream API
+## Stream API (Novoty)
 * maximum example
 
-## Intelligent Repository 
+## Intelligent Repository  (Novoty)
 2 examples of map-based repositories:
 
 * classic with lists and getters returning null
@@ -34,4 +34,4 @@ Useful links, small snippets, notes etc. should be gathered in this file.
     * get returning optional
     * lambda filters
   
-## Spliterator?
+## Spliterator? (Novoty)
