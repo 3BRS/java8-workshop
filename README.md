@@ -1,6 +1,6 @@
 # Java 8 workshop
 Useful links, small snippets, notes etc. should be gathered in this file.
-http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html
+* http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html
 
 ## Functional Programming (General) (Ondra)
 * immutability
