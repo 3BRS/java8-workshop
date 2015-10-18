@@ -24,7 +24,7 @@ public class Example01ForEach {
         });
 
         System.out.println("\n\nwith lambda statement with type");
-        names.forEach((String name) -> {
+        names.forEach((String name) -> {    // brackets required
             System.out.println(name);
         });
 
