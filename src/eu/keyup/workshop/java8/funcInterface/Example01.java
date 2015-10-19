@@ -1,5 +1,8 @@
 package eu.keyup.workshop.java8.funcInterface;
 
+import eu.keyup.workshop.java8.funcInterface.interfaces.Draggable;
+import eu.keyup.workshop.java8.funcInterface.interfaces.ValueHolder;
+
 /**
  * @author Ondřej Kratochvíl
  */
