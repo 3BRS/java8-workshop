@@ -1,6 +1,5 @@
 package eu.keyup.workshop.java8.lambdas;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**

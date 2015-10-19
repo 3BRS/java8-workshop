@@ -1,4 +1,4 @@
-package eu.keyup.workshop.java8.funcInterface;
+package eu.keyup.workshop.java8.funcInterface.interfaces;
 
 /**
  * @author Ondřej Kratochvíl

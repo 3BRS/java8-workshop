@@ -1,9 +1,10 @@
 package eu.keyup.workshop.java8.lambdas;
 
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 /**
  * @author Ondřej Kratochvíl
@@ -35,11 +36,26 @@ public class Example02 {
         // getting the value - new way
         double newWay = ((PowerCalculator) Math::pow).calculate(1, 2);
 
-        // this and super reference
-        // toDo: think of example using this::foo() and super::foo()
+        // constructor reference
+        List<String> list = new ArrayList<>();
+        list.add("one");
+        list.add("two");
+        // notice type inference when introducing local variable
+        LinkedList<String> linkedCopy = transferElements(list, () -> new LinkedList<>());
 
-        // constructor references
-        // toDo: example
+        // the same with constructor ref (notice that no type is specified, above would return error without diamond)
+        LinkedList<String> nicerLinkedCopy = transferElements(list, LinkedList::new);
+        // analogically using this::foo() and super::foo()
+    }
+
+    public static <T, SOURCE extends Collection<T>, DEST extends Collection<T>>
+    DEST transferElements(SOURCE sourceCollection, Supplier<DEST> collectionFactory) {
+
+        DEST result = collectionFactory.get();
+        for (T t : sourceCollection) {
+            result.add(t);
+        }
+        return result;
     }
 
     @FunctionalInterface
