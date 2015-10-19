@@ -1,11 +1,10 @@
 package eu.keyup.workshop.java8.repo.java8;
 
-import eu.keyup.workshop.java8.repo.Person;
+import eu.keyup.workshop.java8.helper.dto.Person;
 
 import java.util.Collection;
 import java.util.Objects;
 import java.util.Optional;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class PersonJava8Repo extends Java8Repo<Long, Person> {

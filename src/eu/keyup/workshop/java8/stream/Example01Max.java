@@ -6,14 +6,14 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-public class ExampleXXMax {
+public class Example01Max {
 
     public static void main(String[] args) {
         // maximum
         List<Integer> numbers = Arrays.asList(5, 8, 2, 4, 6, 4, 7, 1, 7);
 
         printMax(declarativeMax(numbers));
-        printMax(functionalMax(numbers).get());
+        // todo
 
         // empty with default value
         numbers = Collections.emptyList();
@@ -24,7 +24,7 @@ public class ExampleXXMax {
         }
         printMax(max);
 
-        printMax(functionalMax(numbers).orElse(Integer.MIN_VALUE));
+        // todo
 
         // with exception if empty
         numbers = Collections.singletonList(1);
@@ -35,8 +35,10 @@ public class ExampleXXMax {
         }
         printMax(max);
 
-        printMax(functionalMax(numbers).orElseThrow(() -> new IllegalStateException("No numbers given")));
+        // todo
     }
+
+    // todo: functional max
 
     private static Integer declarativeMax(Iterable<Integer> numbers) {
         Integer max = null;
@@ -46,10 +48,6 @@ public class ExampleXXMax {
             }
         }
         return max;
-    }
-
-    private static Optional<Integer> functionalMax(Collection<Integer> numbers) {
-        return numbers.stream().reduce((n1, n2) -> n1 > n2 ? n1 : n2);
     }
 
     private static void printMax(Integer max) {

@@ -25,6 +25,12 @@ Useful links, small snippets, notes etc. should be gathered in this file.
 
 ## Stream API (Novoty)
 * maximum example
+* joining
+* filtering
+* map
+* flat map
+* stream of streams (Stream.concat )
+* collector
 
 ## Intelligent Repository  (Novoty)
 2 examples of map-based repositories:

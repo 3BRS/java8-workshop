@@ -1,6 +1,6 @@
 package eu.keyup.workshop.java8.repo.classic;
 
-import eu.keyup.workshop.java8.repo.Person;
+import eu.keyup.workshop.java8.helper.dto.Person;
 
 import java.util.ArrayList;
 import java.util.Collection;
