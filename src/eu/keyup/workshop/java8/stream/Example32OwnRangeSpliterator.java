@@ -16,8 +16,8 @@ public class Example32OwnRangeSpliterator {
 
     private static class RangeSpliterator implements Spliterator<Integer> {
 
-        private final int from;
-        private final int to;
+        private int from;
+        private int to;
 
         private RangeSpliterator(int from, int to) {
             this.from = from;
