@@ -1,9 +1,6 @@
 package eu.keyup.workshop.java8.lambdas;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.function.Supplier;
 
 /**
@@ -37,9 +34,7 @@ public class Example02 {
         double newWay = ((PowerCalculator) Math::pow).calculate(1, 2);
 
         // constructor reference
-        List<String> list = new ArrayList<>();
-        list.add("one");
-        list.add("two");
+        List<String> list = Arrays.asList("one", "two");
         // notice type inference when introducing local variable
         LinkedList<String> linkedCopy = transferElements(list, () -> new LinkedList<>());
 
