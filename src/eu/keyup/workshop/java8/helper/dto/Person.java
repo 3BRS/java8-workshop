@@ -1,4 +1,4 @@
-package eu.keyup.workshop.java8.repo;
+package eu.keyup.workshop.java8.helper.dto;
 
 public class Person {
     private final long id;

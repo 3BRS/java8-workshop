@@ -1,5 +1,7 @@
 package eu.keyup.workshop.java8.repo;
 
+import eu.keyup.workshop.java8.helper.Helper;
+import eu.keyup.workshop.java8.helper.dto.Person;
 import eu.keyup.workshop.java8.repo.classic.PersonClassicRepo;
 import eu.keyup.workshop.java8.repo.java8.PersonJava8Repo;
 
@@ -17,10 +19,11 @@ public class ExampleRepo {
 
         print(classicRepo.getOrThrow(1l).getName());
 
+        // java8
+
         // throws NoSuchElementException
-        print(java8Repo.get(1l).get().getName());
+
         // or specific exception
-        print(java8Repo.get(1l).orElseThrow(() -> new IllegalArgumentException("not found")).getName());
 
         // ******************** get or default name ********************
 
@@ -32,16 +35,13 @@ public class ExampleRepo {
             print("default name");
         }
 
-        // voila
-        print(java8Repo.get(999l).map(Person::getName).orElse("default name"));
+        // java-8
+
 
     }
 
     private static void fill(Repo<Person> repo) {
-        repo.store(new Person(1l, "Jizicek", 2, true));
-        repo.store(new Person(2l, "Jirka", 10, true));
-        repo.store(new Person(3l, "Jirka Duchodce", 80, true));
-        repo.store(new Person(4l, "Jirka Mrtvej", 80, false));
+        Helper.preparePeople().forEach(repo::store);
     }
 
     private static void print(String str) {
