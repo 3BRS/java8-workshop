@@ -1,6 +1,7 @@
 package eu.keyup.workshop.java8.optional;
 
 import java.util.Optional;
+import java.util.function.Function;
 
 /**
  * @author Ondřej Kratochvíl
@@ -30,5 +31,16 @@ public class Example01 {
 //        System.out.println("[#orElseGet()]o2 value is: " + o2.orElseGet(() -> Integer.MIN_VALUE));
 //        System.out.println("[#orElseGet()]o3 value is: " + o3.orElseGet(() -> Integer.MIN_VALUE));
         // analogically orElseThrow
+
+        // avoiding nested NPE checks
+        Outer outer = new Outer();
+        if (outer != null &&
+                outer.getNested() != null
+                && outer.getNested().getInner() != null
+                && outer.getNested().getInner().getValue() != null) {
+            System.out.println("The value is: " + outer.getNested().getInner().getValue());
+        }
+        // Optional mapping
+        Optional.of(outer).map(Outer::getNested).map(Nested::getInner).map(Inner::getValue).ifPresent(System.out::println);
     }
 }

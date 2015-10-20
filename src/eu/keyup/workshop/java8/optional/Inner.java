@@ -1,0 +1,17 @@
+package eu.keyup.workshop.java8.optional;
+
+/**
+ * @author Ondřej Kratochvíl
+ */
+public class Inner {
+
+    public String value;
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+}
