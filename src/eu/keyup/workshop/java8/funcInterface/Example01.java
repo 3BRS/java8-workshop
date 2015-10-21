@@ -19,11 +19,11 @@ public class Example01 {
             System.out.println("getValue was called");
             return 7;
         };
-        System.out.println(v.getValue());
+//        System.out.println(v.getValue());
 
-//        Draggable exceptional = () -> {
-//            throw new RuntimeException();
-//        };
-//        exceptional.onDrag();
+        Draggable exceptional = () -> {
+            throw new RuntimeException();
+        };
+        exceptional.onDrag();
     }
 }
